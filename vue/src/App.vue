@@ -1,4 +1,5 @@
 <script setup>
+import 'normalize.css'
 import Header from './components/Header.vue'
 
 // import { useStore } from 'vuex'
