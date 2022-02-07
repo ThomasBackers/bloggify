@@ -1,6 +1,6 @@
 <script setup>
 import 'normalize.css'
-import Header from './components/Header.vue'
+import Home from './views/Home.vue'
 
 // import { useStore } from 'vuex'
 // import { computed } from 'vue'
@@ -10,18 +10,31 @@ import Header from './components/Header.vue'
 </script>
 
 <template>
-  <Header />
-
+  <Home />
   <!-- <pre>{{ user.data.name }}</pre> -->
 </template>
 
 <style lang="scss">
+/*
+As stylesheets stored in 'assets/sass/abstracts'
+are supposed to be global they're accessible in
+the whole application through preprocessorOptions
+in vite.config.js
+*/
+
+:root {
+  font-size: 16px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1440px;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

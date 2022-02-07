@@ -1,12 +1,9 @@
-<script setup>
-</script>
-
 <template>
-  <header class="header">
+  <nav class="navbar">
     <div class="container">
       <fa icon="caret-down" />
     </div>
-  </header>
+  </nav>
 </template>
 
 <style lang="scss">
