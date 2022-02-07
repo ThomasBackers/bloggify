@@ -1,15 +1,11 @@
-<script>
+<script setup>
 import HelloWorld from './components/HelloWorld.vue'
-import { mapState } from 'vuex'
 
-export default {
-  components: {
-    HelloWorld
-  },
-  computed: {
-    ...mapState(['user'])
-  }
-}
+import { useStore } from 'vuex'
+import { computed } from 'vue'
+
+const store = useStore()
+const user = computed(() => store.state.user)
 </script>
 
 <template>
