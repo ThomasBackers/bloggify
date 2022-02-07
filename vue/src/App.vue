@@ -13,8 +13,6 @@ import Header from './components/Header.vue'
   <Header />
 
   <!-- <pre>{{ user.data.name }}</pre> -->
-
-  <img alt="Vue logo" src="./assets/logo.png" />
 </template>
 
 <style lang="scss">
