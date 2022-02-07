@@ -1,20 +1,22 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
 
-import { useStore } from 'vuex'
-import { computed } from 'vue'
+// import { useStore } from 'vuex'
+// import { computed } from 'vue'
 
-const store = useStore()
-const user = computed(() => store.state.user)
+// const store = useStore()
+// const user = computed(() => store.state.user)
 </script>
 
 <template>
-  <pre>{{ user.data.name }}</pre>
+  <Header />
+
+  <!-- <pre>{{ user.data.name }}</pre> -->
+
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
 </template>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
