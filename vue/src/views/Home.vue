@@ -5,7 +5,14 @@ import Footer from '../components/Footer.vue'
 <template>
   <main></main>
 
-  <Footer />
+  <Footer
+    :networks="[
+      ['youtube', '/c/TheCodeholic'],
+      ['github', '/thecodeholic'],
+      ['twitter', '/thecodeholic'],
+    ]"
+    attributions="&copy; 2022 Bloggify"
+  />
 </template>
 
 <style lang="scss">
