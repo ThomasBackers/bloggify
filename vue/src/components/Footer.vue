@@ -1,10 +1,11 @@
 <script setup>
 import SocialNetworks from './SocialNetworks.vue'
+import Attributions from './Attributions.vue'
 import { defineProps } from 'vue'
 
 defineProps({
   networks: Array,
-  attributions: String
+  attributions: Object
 })
 </script>
 
@@ -14,9 +15,11 @@ defineProps({
         :networks="networks"
       />
 
-      <p class="footer__attributions">
-        {{ attributions }}
-      </p>
+      <Attributions
+        :appName="attributions.appName"
+        :author="attributions.author"
+        :currentYear="attributions.currentYear"
+      />
   </footer>
 </template>
 

@@ -1,4 +1,6 @@
 <script setup>
+import BurgerMenu from './BurgerMenu.vue'
+
 defineProps({
   appName: String
 })
@@ -10,9 +12,18 @@ defineProps({
       {{ appName }}
     </h1>
 
-    <fa icon="caret-down" />
+    <BurgerMenu />
   </header>
 </template>
 
 <style lang="scss">
+.header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  
+  &__heading {
+    margin: 0;
+  }
+}
 </style>

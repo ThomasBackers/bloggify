@@ -1,6 +1,5 @@
 <script setup>
 import 'normalize.css'
-import Home from './views/Home.vue'
 // import { useStore } from 'vuex'
 // import { computed } from 'vue'
 
@@ -25,10 +24,20 @@ in vite.config.js
 :root {
   // Typography
   font-size: 16px;
+  color: #FFF;
   
   // Base
   ul {
     list-style-type: none;
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  button {
+    background: none;
+    border: none;
   }
 }
 
@@ -36,6 +45,7 @@ in vite.config.js
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  min-height: 100vh;
+  background-color: #000;
 }
 </style>

@@ -4,6 +4,7 @@ import Footer from '../components/Footer.vue'
 
 const data = {
   appName: 'bloggify',
+  author: 'Thomas Backers',
   currentYear: new Date().getFullYear()
 }
 </script>
@@ -21,7 +22,11 @@ const data = {
       ['github', '/thecodeholic'],
       ['twitter', '/thecodeholic'],
     ]"
-    :attributions="`&copy; ${data.currentYear} ${data.appName}`"
+    :attributions="{
+      appName: data.appName,
+      author: data.author,
+      currentYear: data.currentYear
+    }"
   />
 </template>
 
