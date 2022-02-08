@@ -31,6 +31,10 @@ in vite.config.js
   max-width: 1440px;
 }
 
+ul {
+  list-style-type: none;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
