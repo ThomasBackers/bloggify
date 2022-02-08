@@ -1,7 +1,6 @@
 <script setup>
 import 'normalize.css'
 import Home from './views/Home.vue'
-
 // import { useStore } from 'vuex'
 // import { computed } from 'vue'
 
@@ -10,7 +9,7 @@ import Home from './views/Home.vue'
 </script>
 
 <template>
-  <Home />
+  <router-view></router-view>
   <!-- <pre>{{ user.data.name }}</pre> -->
 </template>
 
@@ -22,17 +21,15 @@ the whole application through preprocessorOptions
 in vite.config.js
 */
 
+// PRESETS
 :root {
+  // Typography
   font-size: 16px;
-}
-
-.container {
-  width: 90%;
-  max-width: 1440px;
-}
-
-ul {
-  list-style-type: none;
+  
+  // Base
+  ul {
+    list-style-type: none;
+  }
 }
 
 #app {
