@@ -10,7 +10,6 @@ defineProps({
 
 <template>
   <footer class="footer">
-    <div class="container">
       <SocialNetworks
         :networks="networks"
       />
@@ -18,7 +17,6 @@ defineProps({
       <p class="footer__attributions">
         {{ attributions }}
       </p>
-    </div>
   </footer>
 </template>
 
