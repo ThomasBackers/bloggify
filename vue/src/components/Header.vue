@@ -9,8 +9,10 @@ defineProps({
     <h1 class="header__heading">
       {{ appName }}
     </h1>
+
+    <fa icon="caret-down" />
   </header>
 </template>
 
-<style>
+<style lang="scss">
 </style>

@@ -3,18 +3,14 @@ import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
 
 const data = {
-  appName = 'bloggify',
+  appName: 'bloggify',
   currentYear: new Date().getFullYear()
-}
-
-const methods = {
-  capitalize() {},
 }
 </script>
 
 <template>
   <Header
-    :appName="appName"
+    :appName="data.appName"
   />
 
   <router-view></router-view>
@@ -25,7 +21,7 @@ const methods = {
       ['github', '/thecodeholic'],
       ['twitter', '/thecodeholic'],
     ]"
-    :attributions="`&copy; ${data.currentYear} ${appName}`"
+    :attributions="`&copy; ${data.currentYear} ${data.appName}`"
   />
 </template>
 
