@@ -17,12 +17,13 @@
 
 <style lang="scss">
 .burger-menu {
-  width: 1.2rem;
+  width: 1.5rem;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
 
   &__bar {
+    position: relative;
     background-color: $lightest-color;
     width: 100%;
     height: 2px;
@@ -30,8 +31,22 @@
   }
 }
 
-@keyframes BurgerMenu {
-  0% {}
-  100% {}
+// OPENING ANIMATION
+@keyframes openingTopBar {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+@keyframes openingBottomBar {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
 }
 </style>

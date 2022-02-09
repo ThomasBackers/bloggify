@@ -39,6 +39,7 @@ defineProps({
 
   &__home-link {
     width: 50%;
+    max-width: 140px;
     display: flex;
     align-items: center;
 
