@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <figure class="latest-songs">
+  <div class="latest-songs">
     <ul class="latest-songs__carousel">
       <li class="latest-songs__carousel__slide">
         <img
@@ -44,7 +44,7 @@
         >
       </li>
     </ul>
-  </figure>
+  </div>
 </template>
 
 <style lang="scss">
