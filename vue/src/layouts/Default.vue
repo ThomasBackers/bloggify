@@ -2,7 +2,7 @@
 import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
 
-const data = {
+const APP_DATA = {
   appName: 'bloggify',
   author: 'Thomas Backers',
   currentYear: new Date().getFullYear()
@@ -11,7 +11,7 @@ const data = {
 
 <template>
   <Header
-    :appName="data.appName"
+    :appName="APP_DATA.appName"
   />
 
   <router-view></router-view>
@@ -23,9 +23,9 @@ const data = {
       ['twitter', '/thecodeholic'],
     ]"
     :attributions="{
-      appName: data.appName,
-      author: data.author,
-      currentYear: data.currentYear
+      appName: APP_DATA.appName,
+      author: APP_DATA.author,
+      currentYear: APP_DATA.currentYear
     }"
   />
 </template>

@@ -1,10 +1,17 @@
 <script setup>
-import LatestSongs from '../components/LatestSongs.vue'
+import WelcomeMessage from '../components/WelcomeMessage.vue'
 </script>
 
 <template>
-  <main class="home"></main>
+  <main class="home">
+    <WelcomeMessage />
+  </main>
 </template>
 
 <style lang="scss">
+.home {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+}
 </style>

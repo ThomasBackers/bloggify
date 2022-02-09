@@ -31,6 +31,7 @@ import 'normalize.css'
 
   a {
     text-decoration: none;
+    color: $lightest-color;
 
     &:visited {
       color: $lightest-color;
@@ -59,5 +60,7 @@ import 'normalize.css'
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
   background-color: $darkest-color;
+  display: flex;
+  flex-direction: column;
 }
 </style>
