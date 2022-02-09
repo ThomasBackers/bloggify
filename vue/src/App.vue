@@ -24,7 +24,7 @@ in vite.config.js
 :root {
   // Typography
   font-size: 16px;
-  color: #FFF;
+  color: $lightest-color;
   
   // Base
   ul {
@@ -38,6 +38,7 @@ in vite.config.js
   button {
     background: none;
     border: none;
+    cursor: pointer;
   }
 }
 
@@ -46,6 +47,6 @@ in vite.config.js
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  background-color: #000;
+  background-color: $darkest-color;
 }
 </style>

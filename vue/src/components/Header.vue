@@ -21,6 +21,7 @@ defineProps({
   padding: 1.5rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   
   &__heading {
     margin: 0;
