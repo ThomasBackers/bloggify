@@ -1,7 +1,6 @@
 <script setup>
 import SocialNetworks from './SocialNetworks.vue'
 import Attributions from './Attributions.vue'
-import { defineProps } from 'vue'
 
 defineProps({
   networks: Array,
