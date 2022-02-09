@@ -1,4 +1,5 @@
 <script setup>
+import LatestSongs from '../components/LatestSongs.vue'
 </script>
 
 <template>
