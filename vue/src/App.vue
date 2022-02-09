@@ -13,12 +13,10 @@ import 'normalize.css'
 </template>
 
 <style lang="scss">
-/*
-As stylesheets stored in 'assets/sass/abstracts'
-are supposed to be global they're accessible in
-the whole application through preprocessorOptions
-in vite.config.js
-*/
+// As stylesheets stored in 'assets/sass/'
+// are supposed to be global they're accessible in
+// the whole application through preprocessorOptions
+// in vite.config.js
 
 // PRESETS
 :root {
@@ -32,13 +30,26 @@ in vite.config.js
   }
 
   a {
-    display: inline-block;
+    text-decoration: none;
+
+    &:visited {
+      color: $lightest-color;
+    }
   }
 
   button {
     background: none;
     border: none;
     cursor: pointer;
+  }
+
+  .container {
+    width: 78%;
+    margin: 0 auto;
+  }
+
+  .hidden {
+    display: none;
   }
 }
 

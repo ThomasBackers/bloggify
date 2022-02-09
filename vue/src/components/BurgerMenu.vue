@@ -29,4 +29,9 @@
     margin: 1.5px 0;
   }
 }
+
+@keyframes BurgerMenu {
+  0% {}
+  100% {}
+}
 </style>

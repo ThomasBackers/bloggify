@@ -9,23 +9,42 @@ defineProps({
 
 <template>
   <header class="header">
-    <h1 class="header__heading">
-      {{ appName }}
-    </h1>
+    <div class="container">
+      <h1 class="header__heading hidden">
+        {{ appName }}
+      </h1>
 
-    <BurgerMenu />
+      <a class="header__home-link" href="/">
+        <img
+          class="header__home-link__logo"
+          src="../assets/images/logo.svg"
+          :alt="`${appName} logo`"
+        />
+      </a>
+
+      <BurgerMenu />
+    </div>
   </header>
 </template>
 
 <style lang="scss">
 .header {
-  padding: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-  &__heading {
-    margin: 0;
+  padding-top: 1.5rem;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__home-link {
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    &__logo {
+      width: 100%;
+    }
   }
 }
 </style>
