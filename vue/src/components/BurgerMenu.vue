@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 
+let isMenuOpen = false
+
 const topBar = ref()
 const midBar = ref()
 const bottomBar = ref()
@@ -15,9 +17,17 @@ const assignAnim = (eltRef, animName) => {
     class="burger-menu"
     type="button"
     @click="() => {
-      assignAnim(topBar, 'openingTopBar')
-      assignAnim(midBar, 'openingMidBar')
-      assignAnim(bottomBar, 'openingBottomBar')
+      if (!isMenuOpen) {
+        assignAnim(topBar, 'openingTopBar')
+        assignAnim(midBar, 'openingMidBar')
+        assignAnim(bottomBar, 'openingBottomBar')
+        isMenuOpen = true
+      } else {
+        assignAnim(topBar, 'closingTopBar')
+        assignAnim(midBar, 'closingMidBar')
+        assignAnim(bottomBar, 'closingBottomBar')
+        isMenuOpen = false
+      }
     }"
   >
     <div class="burger-menu__bar" ref="topBar"></div>
@@ -76,7 +86,7 @@ const assignAnim = (eltRef, animName) => {
     transform: translateY(-5px) rotate(0);
   }
   100% {
-    transform: translateY(-5px) rotate(-45deg);
+    transform: translateY(-5px) rotate(135deg);
   }
 }
 
@@ -93,9 +103,21 @@ const assignAnim = (eltRef, animName) => {
   }
 }
 
+@keyframes closingMidBar {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes closingBottomBar {
   0% {
-    transform: translateY(-5px) rotate(-45deg);
+    transform: translateY(-5px) rotate(135deg);
   }
   50% {
     transform: translateY(-5px) rotate(0);
