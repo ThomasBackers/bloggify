@@ -1,4 +1,5 @@
 <script setup>
+import { defineProps } from 'vue'
 import SocialNetworks from './SocialNetworks.vue'
 import Attributions from './Attributions.vue'
 
