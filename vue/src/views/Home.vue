@@ -1,10 +1,10 @@
 <script setup>
-import WelcomeMessage from '../components/WelcomeMessage.vue'
+import LatestSongs from '../components/LatestSongs.vue'
 </script>
 
 <template>
   <main class="home">
-    <WelcomeMessage />
+    <LatestSongs />
   </main>
 </template>
 
