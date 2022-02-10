@@ -73,7 +73,7 @@
     display: flex;
     width: 500%;
     height: 100%;
-    animation: autoScroll 20s ease-out alternate infinite;
+    animation: autoScroll 20s alternate infinite;
 
     &__slide {
       width: 20%;
