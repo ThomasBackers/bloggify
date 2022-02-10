@@ -14,11 +14,23 @@ defineProps({
       :key="i"
     >
       <a :href="`https://${network[0]}.com${network[1]}`">
-        <fa :icon="['fab', network[0]]" />
+        {{ network[0] }}
       </a>
     </li>
   </ul>
 </template>
 
 <style lang="scss">
+  .social-networks {
+    margin: 0;
+    padding: 0;
+
+    &__network {
+      a {
+        color: $darkest-color;
+        text-transform: uppercase;
+        font-size: .8rem;
+      }
+    }
+  }
 </style>

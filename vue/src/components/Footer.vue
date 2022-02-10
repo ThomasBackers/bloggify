@@ -15,7 +15,7 @@ defineProps({
       <fa icon="chevron-up" />
     </button>
 
-    <div class="footer__card">
+    <div class="footer__card container">
       <SocialNetworks
         :networks="networks"
       />
@@ -31,12 +31,26 @@ defineProps({
 
 <style lang="scss">
 .footer {
+  font-family: $main-font;
+  overflow: hidden;
+  text-align: center;
+
   &__card-toggler {
-    background-color: $lightest-color;
+    background-color: $darkest-color;
+    color: $lightest-color;
     padding: 1rem;
     border-radius: 50%;
     margin: 0 auto;
     width: 50.4px;
+  }
+
+  &__card {
+    background-color: $lightest-color;
+    color: $darkest-color;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 3rem;
+    box-sizing: border-box;
   }
 }
 </style>

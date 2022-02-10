@@ -25,4 +25,24 @@ defineProps({
 </template>
 
 <style lang="scss">
+  .attributions {
+    &__copyright {
+      margin: 0;
+
+      &__app-name {
+        text-transform: capitalize;
+        font-size: .85rem;
+      }
+    }
+
+    &__author {
+      font-size: .8rem;
+      font-weight: 400;
+      color: $darkest-color;
+      
+      &:visited {
+        color: $darkest-color;
+      }
+    }
+  }
 </style>

@@ -31,11 +31,6 @@ import 'normalize.css'
 
   a {
     text-decoration: none;
-    color: $lightest-color;
-
-    &:visited {
-      color: $lightest-color;
-    }
   }
 
   button {
