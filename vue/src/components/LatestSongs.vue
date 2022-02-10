@@ -73,7 +73,7 @@
     display: flex;
     width: 500%;
     height: 100%;
-    animation: autoScroll 20s alternate infinite;
+    animation: autoScroll 24s infinite;
 
     &__slide {
       width: 20%;
@@ -97,32 +97,35 @@
   0% {
     transform: translateX(0%)
   }
-  11.11% {
+  10% {
     transform: translateX(0%)
   }
-  22.22% {
+  20% {
     transform: translateX(-20%)
   }
-  33.33% {
+  30% {
     transform: translateX(-20%)
   }
-  44.44% {
+  40% {
     transform: translateX(-40%)
   }
-  55.55% {
+  50% {
     transform: translateX(-40%)
   }
-  66.66% {
+  60% {
     transform: translateX(-60%)
   }
-  77.77% {
+  70% {
     transform: translateX(-60%)
   }
-  88.88% {
+  80% {
+    transform: translateX(-80%)
+  }
+  90% {
     transform: translateX(-80%)
   }
   100% {
-    transform: translateX(-80%)
+    transform: translateX(0%)
   }
 }
 </style>
