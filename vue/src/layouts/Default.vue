@@ -18,9 +18,8 @@ const APP_DATA = {
 
   <Footer
     :networks="[
-      ['youtube', '/c/TheCodeholic'],
-      ['github', '/thecodeholic'],
-      ['twitter', '/thecodeholic'],
+      ['github', '/ThomasBackers'],
+      ['linkedin', '/in/thomas-backers-54197621b'],
     ]"
     :attributions="{
       appName: APP_DATA.appName,

@@ -2,6 +2,7 @@
 import { defineProps } from 'vue'
 import SocialNetworks from './SocialNetworks.vue'
 import Attributions from './Attributions.vue'
+import Player from './Player.vue'
 
 defineProps({
   networks: Array,
@@ -16,6 +17,8 @@ defineProps({
     </button>
 
     <div class="footer__card container">
+      <Player />
+
       <SocialNetworks
         :networks="networks"
       />
@@ -49,8 +52,9 @@ defineProps({
     color: $darkest-color;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    padding: 3rem;
+    padding: 1.5rem 3rem 3rem 3rem;
     box-sizing: border-box;
+    max-width: 456px;
   }
 }
 </style>

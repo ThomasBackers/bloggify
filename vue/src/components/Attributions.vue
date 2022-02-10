@@ -38,10 +38,10 @@ defineProps({
     &__author {
       font-size: .8rem;
       font-weight: 400;
-      color: $darkest-color;
+      color: lighten($darkest-color, 30%);
       
       &:visited {
-        color: $darkest-color;
+        color: lighten($darkest-color, 30%);
       }
     }
   }
