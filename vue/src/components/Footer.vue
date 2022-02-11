@@ -35,8 +35,8 @@ defineProps({
 <style lang="scss">
 .footer {
   font-family: $main-font;
-  overflow: hidden;
   text-align: center;
+  height: 67px;
 
   &__card-toggler {
     background-color: $darkest-color;
@@ -45,6 +45,9 @@ defineProps({
     border-radius: 50%;
     margin: 0 auto;
     width: 50.4px;
+    position: relative;
+    top: -55px;
+    z-index: 1;
   }
 
   &__card {
@@ -54,7 +57,23 @@ defineProps({
     border-top-right-radius: 5px;
     padding: 1.5rem 3rem 3rem 3rem;
     box-sizing: border-box;
-    max-width: 456px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    overflow: hidden;
+    width: 250px;
+    bottom: 0;
+    left: 11%;
+    height: 1rem;
+  }
+}
+
+@keyframes togglerAnim {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
   }
 }
 </style>

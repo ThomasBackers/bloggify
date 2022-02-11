@@ -53,6 +53,8 @@ import 'normalize.css'
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   background-color: $darkest-color;
   display: flex;
   flex-direction: column;

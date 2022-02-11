@@ -15,12 +15,24 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
+
+    <div class="player__controllers">
+      <button class="player__controllers__controller" type="button">
+        <fa icon="backward" />
+      </button>
+      
+      <button class="player__controllers__controller" type="button">
+        <fa icon="forward" />
+      </button>
+    </div>
   </section>
 </template>
 
 <style lang="scss">
 .player {
   padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
 
   &__heading {
     text-transform: uppercase;
@@ -35,6 +47,19 @@
     width: 100%;
     height: 12rem;
     border-radius: 5px;
+  }
+
+  &__controllers {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 70%;
+
+    &__controller {
+      background: none;
+      font-size: 2rem;
+    }
   }
 }
 </style>
