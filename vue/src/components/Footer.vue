@@ -64,7 +64,7 @@ const card = ref()
   height: 67px;
 
   &__card-toggler {
-    background-color: $darkest-color;
+    background-color: rgba(0, 0, 0, 0);
     color: $lightest-color;
     padding: 1rem;
     border-radius: 50%;
@@ -93,7 +93,7 @@ const card = ref()
       border-top-right-radius: 5px;
       padding: 1.5rem 3rem 7rem 3rem;
       box-sizing: border-box;
-      width: 75%;
+      width: 80%;
       transform: translateY(32rem)
     }
   }
@@ -102,7 +102,7 @@ const card = ref()
 @keyframes openingTogglerAnim {
   0% {
     transform: rotate(0);
-    background-color: $darkest-color;
+    background-color: rgba(0, 0, 0, 0);
     color: $lightest-color;
     opacity: 1;
   }
@@ -123,7 +123,7 @@ const card = ref()
   }
   100% {
     transform: rotate(0);
-    background-color: $darkest-color;
+    background-color: rgba(0, 0, 0, 0);
     color: $lightest-color;
     opacity: 1;
   }
