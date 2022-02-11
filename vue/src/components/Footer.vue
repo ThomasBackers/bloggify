@@ -93,9 +93,7 @@ const card = ref()
       border-top-right-radius: 5px;
       padding: 1.5rem 3rem 7rem 3rem;
       box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      width: 250px;
+      width: 75%;
       transform: translateY(32rem)
     }
   }
