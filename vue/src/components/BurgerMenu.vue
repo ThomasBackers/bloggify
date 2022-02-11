@@ -8,7 +8,7 @@ const midBar = ref()
 const bottomBar = ref()
 
 const assignAnim = (eltRef, animName) => {
-  eltRef.style.animation = `${animName} 0.2s ease-out forwards`
+  eltRef.style.animation = `${animName} .2s ease-out forwards`
 }
 </script>
 
