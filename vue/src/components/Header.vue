@@ -3,7 +3,8 @@ import { defineProps } from 'vue'
 import BurgerMenu from './BurgerMenu.vue'
 
 defineProps({
-  appName: String
+  appName: String,
+  isMenuHidden: Boolean
 })
 </script>
 

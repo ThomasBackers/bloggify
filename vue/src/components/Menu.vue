@@ -1,4 +1,9 @@
 <script setup>
+import { defineProps } from 'vue'
+
+defineProps({
+  isMenuHidden: Boolean
+})
 </script>
 
 <template>

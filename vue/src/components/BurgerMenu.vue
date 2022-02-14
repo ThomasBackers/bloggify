@@ -3,9 +3,9 @@ import { ref } from 'vue'
 
 let isMenuOpen = false
 
-const topBar = ref()
-const midBar = ref()
-const bottomBar = ref()
+const topBar = ref(null)
+const midBar = ref(null)
+const bottomBar = ref(null)
 
 const assignAnim = (eltRef, animName) => {
   eltRef.style.animation = `${animName} .2s ease-out forwards`

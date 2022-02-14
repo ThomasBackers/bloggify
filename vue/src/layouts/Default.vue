@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps } from vue
+import { defineProps, ref } from 'vue'
 import Header from '../components/Header.vue'
 import Menu from '../components/Menu.vue'
 import Footer from '../components/Footer.vue'
@@ -10,9 +10,7 @@ const APP_DATA = {
   currentYear: new Date().getFullYear()
 }
 
-defineProps({
-  isMenuHidden: true
-})
+const isMenuHidden = ref(true)
 </script>
 
 <template>
