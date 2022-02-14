@@ -128,4 +128,17 @@ const assignAnim = (eltRef, animName) => {
     transform: translateY(0) rotate(0);
   }
 }
+
+@media all and (min-device-width: 450px) {
+ .burger-menu {
+    position: absolute;
+    right: 11%;
+ }
+}
+
+@media all and (min-device-width: 768px) {
+ .burger-menu {
+    display: none;
+ }
+}
 </style>

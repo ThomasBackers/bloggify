@@ -48,4 +48,12 @@ defineProps({
     }
   }
 }
+
+@media all and (min-device-width: 450px) {
+ .header {
+   .container {
+    justify-content: center;
+   }
+ }
+}
 </style>

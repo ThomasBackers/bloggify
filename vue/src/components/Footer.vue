@@ -106,7 +106,8 @@ const card = ref()
       padding: 1.5rem 3rem 7rem 3rem;
       box-sizing: border-box;
       width: 80%;
-      transform: translateY(32rem)
+      transform: translateY(32rem);
+      max-width: 400px;
     }
   }
 }

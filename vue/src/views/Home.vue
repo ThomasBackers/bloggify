@@ -16,9 +16,9 @@ import LatestSongs from '../components/LatestSongs.vue'
 }
 
 @media all and (min-device-width: 450px) {
- .home {
-   width: 420px;
-   height: 420px;
- }
+  .home {
+    width: 420px;
+    height: 420px;
+  }
 }
 </style>
