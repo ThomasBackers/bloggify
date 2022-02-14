@@ -39,7 +39,18 @@ const card = ref()
       <fa icon="chevron-up" />
     </button>
 
-    <div class="footer__card-container" ref="cardContainer">
+    <div
+      class="footer__card-container"
+      ref="cardContainer"
+      @click="event => {
+        if (event.target === cardContainer && isTogglerActive) {
+          toggler.style.animation = 'closingTogglerAnim .3s ease-out forwards'
+          cardContainer.style.animation = 'closingContainerAnim .3s ease-out forwards'
+          card.style.animation = 'closingCardAnim .3s ease-out forwards'
+          isTogglerActive = false
+        }
+      }"
+    >
       <div class="footer__card-container__card" ref="card">
         <Player />
 
@@ -72,7 +83,7 @@ const card = ref()
     width: 50.4px;
     position: relative;
     top: -23px;
-    z-index: 1;
+    z-index: 2;
   }
 
   &__card-container {
@@ -85,6 +96,7 @@ const card = ref()
     align-items: flex-end;
     overflow: hidden;
     height: 42px;
+    z-index: 1;
 
     &__card {
       background-color: $lightest-color;

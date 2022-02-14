@@ -14,4 +14,11 @@ import LatestSongs from '../components/LatestSongs.vue'
   width: 300px;
   height: 300px;
 }
+
+@media all and (min-device-width: 450px) {
+ .home {
+   width: 420px;
+   height: 420px;
+ }
+}
 </style>
