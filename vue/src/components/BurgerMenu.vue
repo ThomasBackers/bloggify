@@ -46,6 +46,8 @@ const assignAnim = (eltRef, animName) => {
   flex-wrap: wrap;
   padding: 0.3rem 0;
   background: none;
+  position: relative;
+  z-index: 1;
 
   &__bar {
     background-color: $lightest-color;

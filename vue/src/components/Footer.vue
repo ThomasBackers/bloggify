@@ -11,9 +11,9 @@ defineProps({
 
 let isTogglerActive = false
 
-const toggler = ref()
-const cardContainer = ref()
-const card = ref()
+const toggler = ref(null)
+const cardContainer = ref(null)
+const card = ref(null)
 </script>
 
 <template>
@@ -152,14 +152,14 @@ const card = ref()
   }
   100% {
     height: 100%;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .6);
   }
 }
 
 @keyframes closingContainerAnim {
   0% {
     height: 100%;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .6);
   }
   20% {
     background: rgba(0, 0, 0, 0);

@@ -33,19 +33,19 @@
       profile
     </a>
 
-    <a class="menu__corner bottow-left" href="/playlist">
+    <a class="menu__corner bottom-left" href="/playlist">
       playlist
     </a>
 
-    <a class="menu__corner bottow-left hidden" href="/login">
+    <a class="menu__corner bottom-left hidden" href="/login">
       login
     </a>
 
-    <a class="menu__corner bottow-right" href="/logout">
+    <a class="menu__corner bottom-right" href="/logout">
       logout
     </a>
 
-    <a class="menu__corner bottow-right hidden" href="/register">
+    <a class="menu__corner bottom-right hidden" href="/register">
       register
     </a>
   </nav>
@@ -56,16 +56,73 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  z-index: -1;
+
+  a {
+    color: $lightest-color;
+
+    &:visited {
+      color: $lightest-color;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: auto;
+
+    &__element {
+      margin-bottom: .5rem;
+
+      &__link {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+      }
+    }
+  }
 
   &__corner {
     position: absolute;
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: .1rem;
   }
 
-  .top-left {}
+  .top-left {
+    top: 50px;
+    left: 11%;
+  }
 
-  .bottom-left {}
+  .bottom-left {
+    bottom: 50px;
+    left: 11%;
+  }
 
-  .bottom-right {}
+  .bottom-right {
+    bottom: 50px;
+    right: 11%;
+  }
+}
+
+@keyframes openingMenuAnim {
+  0% {
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .8);
+  }
+}
+
+@keyframes closingMenuAnim {
+  0% {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .8);
+  }
+  100% {
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
 </style>
