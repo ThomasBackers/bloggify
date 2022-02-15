@@ -1,14 +1,50 @@
 <script setup>
-import { defineProps } from 'vue'
+import { useStore } from 'vuex'
+import { computed, ref, watchEffect } from 'vue'
 
-defineProps({
-  isMenuHidden: Boolean
+const store = useStore()
+const menu = computed(() => store.state.menu)
+
+const nav = ref(null)
+const list = ref(null)
+const profile = ref(null)
+const playlist = ref(null)
+const login = ref(null)
+const logout = ref(null)
+const register = ref(null)
+
+const launchAnim = anim => {
+  if (anim === 'opening') {
+    nav.value.style.animation = 'openingMenuAnim .2s ease-out forwards'
+    list.value.style.animation = 'openingListAnim .2s ease-out forwards'
+    profile.value.style.animation = 'openingCornerAnim .2s ease-out forwards'
+    playlist.value.style.animation = 'openingCornerAnim .2s ease-out forwards'
+    login.value.style.animation = 'openingCornerAnim .2s ease-out forwards'
+    logout.value.style.animation = 'openingCornerAnim .2s ease-out forwards'
+    register.value.style.animation = 'openingCornerAnim .2s ease-out forwards'
+  } else if (anim === 'closing') {
+    nav.value.style.animation = 'closingMenuAnim .2s ease-out forwards'
+    list.value.style.animation = 'closingListAnim .2s ease-out forwards'
+    profile.value.style.animation = 'closingCornerAnim .2s ease-out forwards'
+    playlist.value.style.animation = 'closingCornerAnim .2s ease-out forwards'
+    login.value.style.animation = 'closingCornerAnim .2s ease-out forwards'
+    logout.value.style.animation = 'closingCornerAnim .2s ease-out forwards'
+    register.value.style.animation = 'closingCornerAnim .2s ease-out forwards'
+  }
+}
+
+watchEffect(() => {
+  if (menu.value.isOpen && menu.value.alreadyBeenUsed) {
+    launchAnim('opening')
+  } else if (menu.value.alreadyBeenUsed) {
+    launchAnim('closing')
+  }
 })
 </script>
 
 <template>
-  <nav class="menu">
-    <ul class="menu__list">
+  <nav class="menu" ref="nav">
+    <ul class="menu__list" ref="list">
       <li class="menu__list__element">
         <a class="menu__list__element__link" href="/about">
           about
@@ -34,23 +70,43 @@ defineProps({
       </li>
     </ul>
 
-    <a class="menu__corner top-left" href="/user-slug">
+    <a 
+      class="menu__corner top-left"
+      href="/user-slug"
+      ref="profile"
+    >
       profile
     </a>
 
-    <a class="menu__corner bottom-left" href="/playlist">
+    <a 
+      class="menu__corner bottom-left"
+      href="/playlist"
+      ref="playlist"
+    >
       playlist
     </a>
 
-    <a class="menu__corner bottom-left hidden" href="/login">
+    <a 
+      class="menu__corner bottom-left hidden"
+      href="/login"
+      ref="login"
+    >
       login
     </a>
 
-    <a class="menu__corner bottom-right" href="/logout">
+    <a 
+      class="menu__corner bottom-right"
+      href="/logout"
+      ref="logout"
+    >
       logout
     </a>
 
-    <a class="menu__corner bottom-right hidden" href="/register">
+    <a 
+      class="menu__corner bottom-right hidden"
+      href="/register"
+      ref="register"
+    >
       register
     </a>
   </nav>
@@ -75,6 +131,7 @@ defineProps({
   &__list {
     padding: 0;
     margin: auto;
+    text-align: center;
 
     &__element {
       margin-bottom: .5rem;
@@ -94,7 +151,7 @@ defineProps({
   }
 
   .top-left {
-    top: 50px;
+    top: 64px;
     left: 11%;
   }
 
@@ -114,6 +171,9 @@ defineProps({
     z-index: -1;
     background-color: rgba(0, 0, 0, 0);
   }
+  1% {
+    z-index: 1;
+  }
   100% {
     z-index: 1;
     background-color: rgba(0, 0, 0, .8);
@@ -125,9 +185,52 @@ defineProps({
     z-index: 1;
     background-color: rgba(0, 0, 0, .8);
   }
+  99% {
+    z-index: 1;
+  }
   100% {
     z-index: -1;
     background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes openingListAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes closingListAnim {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes openingCornerAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes closingCornerAnim {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 </style>

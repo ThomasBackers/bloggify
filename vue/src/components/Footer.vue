@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, ref } from 'vue'
+import { ref } from 'vue'
 import SocialNetworks from './SocialNetworks.vue'
 import Attributions from './Attributions.vue'
 import Player from './Player.vue'
@@ -83,7 +83,7 @@ const card = ref(null)
     width: 50.4px;
     position: relative;
     top: -23px;
-    z-index: 2;
+    z-index: 3;
   }
 
   &__card-container {
@@ -96,7 +96,7 @@ const card = ref(null)
     align-items: flex-end;
     overflow: hidden;
     height: 42px;
-    z-index: 1;
+    z-index: 2;
 
     &__card {
       background-color: $lightest-color;

@@ -1,7 +1,9 @@
 <script setup>
-import { ref } from 'vue'
+import { useStore } from 'vuex'
+import { ref, computed } from 'vue'
 
-let isMenuOpen = false
+const store = useStore()
+const menu = computed(() => store.state.menu)
 
 const topBar = ref(null)
 const midBar = ref(null)
@@ -17,16 +19,16 @@ const assignAnim = (eltRef, animName) => {
     class="burger-menu"
     type="button"
     @click="() => {
-      if (!isMenuOpen) {
-        assignAnim(topBar, 'openingTopBar')
-        assignAnim(midBar, 'openingMidBar')
-        assignAnim(bottomBar, 'openingBottomBar')
-        isMenuOpen = true
-      } else {
+      if (menu.isOpen) {
         assignAnim(topBar, 'closingTopBar')
         assignAnim(midBar, 'closingMidBar')
         assignAnim(bottomBar, 'closingBottomBar')
-        isMenuOpen = false
+        store.dispatch('setMenu')
+      } else {
+        assignAnim(topBar, 'openingTopBar')
+        assignAnim(midBar, 'openingMidBar')
+        assignAnim(bottomBar, 'openingBottomBar')
+        store.dispatch('setMenu')
       }
     }"
   >
@@ -47,7 +49,7 @@ const assignAnim = (eltRef, animName) => {
   padding: 0.3rem 0;
   background: none;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 
   &__bar {
     background-color: $lightest-color;
