@@ -48,7 +48,8 @@ const assignAnim = (eltRef, animName) => {
   flex-wrap: wrap;
   padding: 0.3rem 0;
   background: none;
-  position: relative;
+  position: fixed;
+  right: 11%;
   z-index: 2;
 
   &__bar {

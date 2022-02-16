@@ -1,15 +1,9 @@
 <script setup>
 import 'normalize.css'
-// import { useStore } from 'vuex'
-// import { computed } from 'vue'
-
-// const store = useStore()
-// const user = computed(() => store.state.user)
 </script>
 
 <template>
   <router-view></router-view>
-  <!-- <pre>{{ user.data.name }}</pre> -->
 </template>
 
 <style lang="scss">
@@ -23,6 +17,7 @@ import 'normalize.css'
   // Typography
   font-size: 16px;
   color: $lightest-color;
+  font-family: $main-font;
   
   // Base
   ul {
@@ -49,11 +44,9 @@ import 'normalize.css'
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  max-height: 100vh;
   overflow: hidden;
   background-color: $darkest-color;
   display: flex;

@@ -18,27 +18,6 @@ const card = ref(null)
 
 <template>
   <footer class="footer">
-    <button
-      class="footer__card-toggler"
-      ref="toggler"
-      @click="() => {
-        if (!isTogglerActive) {
-          toggler.style.animation = 'openingTogglerAnim .3s ease-out forwards'
-          cardContainer.style.animation = 'openingContainerAnim .3s ease-out forwards'
-          card.style.animation = 'openingCardAnim .3s ease-out forwards'
-          isTogglerActive = true
-        }
-        else {
-          toggler.style.animation = 'closingTogglerAnim .3s ease-out forwards'
-          cardContainer.style.animation = 'closingContainerAnim .3s ease-out forwards'
-          card.style.animation = 'closingCardAnim .3s ease-out forwards'
-          isTogglerActive = false
-        }
-      }"
-    >
-      <fa icon="chevron-up" />
-    </button>
-
     <div
       class="footer__card-container"
       ref="cardContainer"
@@ -51,6 +30,26 @@ const card = ref(null)
         }
       }"
     >
+      <button
+        class="footer__card-container__card-toggler"
+        ref="toggler"
+        @click="() => {
+          if (!isTogglerActive) {
+            toggler.style.animation = 'openingTogglerAnim .3s ease-out forwards'
+            cardContainer.style.animation = 'openingContainerAnim .3s ease-out forwards'
+            card.style.animation = 'openingCardAnim .3s ease-out forwards'
+            isTogglerActive = true
+          } else {
+            toggler.style.animation = 'closingTogglerAnim .3s ease-out forwards'
+            cardContainer.style.animation = 'closingContainerAnim .3s ease-out forwards'
+            card.style.animation = 'closingCardAnim .3s ease-out forwards'
+            isTogglerActive = false
+          }
+        }"
+      >
+        <fa icon="chevron-up" />
+      </button>
+
       <div class="footer__card-container__card" ref="card">
         <Player />
 
@@ -74,20 +73,8 @@ const card = ref(null)
   text-align: center;
   height: 67px;
 
-  &__card-toggler {
-    background-color: rgba(0, 0, 0, 0);
-    color: $lightest-color;
-    padding: 1rem;
-    border-radius: 50%;
-    margin: 0 auto;
-    width: 50.4px;
-    position: relative;
-    top: -23px;
-    z-index: 3;
-  }
-
   &__card-container {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 100%;
@@ -97,6 +84,18 @@ const card = ref(null)
     overflow: hidden;
     height: 42px;
     z-index: 2;
+
+    &__card-toggler {
+      background-color: $darkest-color;
+      color: $lightest-color;
+      padding: 1rem;
+      border-radius: 50%;
+      margin: 0 auto;
+      width: 50.4px;
+      position: fixed;
+      bottom: 45px;
+      z-index: 3;
+    }
 
     &__card {
       background-color: $lightest-color;
@@ -115,7 +114,7 @@ const card = ref(null)
 @keyframes openingTogglerAnim {
   0% {
     transform: rotate(0);
-    background-color: rgba(0, 0, 0, 0);
+    background-color: $darkest-color;
     color: $lightest-color;
     opacity: 1;
   }
@@ -136,7 +135,7 @@ const card = ref(null)
   }
   100% {
     transform: rotate(0);
-    background-color: rgba(0, 0, 0, 0);
+    background-color: $darkest-color;
     color: $lightest-color;
     opacity: 1;
   }

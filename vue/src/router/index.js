@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import DefaultLayout from '../layouts/Default.vue'
 import Home from '../views/Home.vue'
+import Contact from '../views/Contact.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 
@@ -10,9 +11,14 @@ const routes = [
     component: DefaultLayout,
     children: [
       {
-        path: '/',
+        path: '',
         name: 'home',
         component: Home
+      },
+      {
+        path: 'contact',
+        name: 'contact',
+        component: Contact
       }
     ]
   },
