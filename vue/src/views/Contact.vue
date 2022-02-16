@@ -36,6 +36,10 @@
         <input type="checkbox" class="contact__form__label__checkbox">
         I am happy to be contacted regarding my enquiry
       </label>
+
+      <button class="contact__form__button">
+        send
+      </button>
     </form>
   </main>
 </template>
@@ -58,15 +62,16 @@
     display: flex;
     flex-direction: column;
     width: 80%;
+    max-width: 400px;
     margin: 0 auto;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
 
     &__label {
       width: 100%;
       padding: .75rem 0;
       text-transform: uppercase;
       font-size: .9rem;
-      &:last-child {
+      &:nth-child(5) {
         width: 80%;
         margin: 0 auto;
         text-transform: unset;
@@ -95,6 +100,17 @@
         width: 20px;
         height: 20px;
       }
+    }
+
+    &__button {
+      margin-top: 2rem;
+      padding: .6rem 0;
+      background-color: $button-color;
+      border-radius: 5px;
+      color: $lightest-color;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+      font-weight: 500;
     }
   }
 }
