@@ -34,13 +34,13 @@ defineProps({
       {{ input.label }}
 
       <input
-        v-if="input.type === 'text'"
-        type="text"
+        v-if="input.type === 'text' || input.type === 'password' || input.type === 'email'"
+        :type="input.type"
         :class="`${sectionName}__form__label__input`"
       >
 
       <textarea
-        v-if="input.type === 'textarea'"
+        v-else-if="input.type === 'textarea'"
         rows="10"
         :class="`${sectionName}__form__label__input`"
       ></textarea>

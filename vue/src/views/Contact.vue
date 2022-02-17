@@ -13,12 +13,12 @@ import Form from '../components/Form.vue'
         sectionName="contact"
         :inputs="[
           {
-            label: 'your name (required)',
+            label: 'your name',
             type: 'text'
           },
           {
-            label: 'your email (required)',
-            type: 'text'
+            label: 'your email',
+            type: 'email'
           },
           {
             label: 'subject',
