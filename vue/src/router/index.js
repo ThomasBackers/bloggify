@@ -19,18 +19,18 @@ const routes = [
         path: 'contact',
         name: 'contact',
         component: Contact
+      },
+      {
+        path: 'login',
+        name: 'login',
+        component: Login
+      },
+      {
+        path: 'register',
+        name: 'register',
+        component: Register
       }
     ]
-  },
-  {
-    path: '/login',
-    name: 'login',
-    component: Login
-  },
-  {
-    path: '/register',
-    name: 'register',
-    component: Register
   }
 ]
 

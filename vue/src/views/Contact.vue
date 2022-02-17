@@ -2,116 +2,50 @@
 </script>
 
 <template>
-  <main class="contact">
-    <h2 class="contact__heading">
-      contact
-    </h2>
+  <main>
+    <section class="contact">
+      <h2 class="contact__heading">
+        contact
+      </h2>
 
-    <form
-      class="contact__form"
-      action=""
-      method=""
-    >
-      <label class="contact__form__label">
-        your name (required)
-        <input type="text" class="contact__form__label__input">
-      </label>
+      <form
+        class="contact__form"
+        action=""
+        method=""
+      >
+        <label class="contact__form__label">
+          your name (required)
+          <input type="text" class="contact__form__label__input">
+        </label>
 
-      <label class="contact__form__label">
-        your email (required)
-        <input type="text" class="contact__form__label__input">
-      </label>
+        <label class="contact__form__label">
+          your email (required)
+          <input type="text" class="contact__form__label__input">
+        </label>
 
-      <label class="contact__form__label">
-        subject
-        <input type="text" class="contact__form__label__input">
-      </label>
+        <label class="contact__form__label">
+          subject
+          <input type="text" class="contact__form__label__input">
+        </label>
 
-      <label class="contact__form__label">
-        your message
-        <textarea class="contact__form__label__input" rows="10"></textarea>
-      </label>
+        <label class="contact__form__label">
+          your message
+          <textarea class="contact__form__label__input" rows="10"></textarea>
+        </label>
 
-      <label class="contact__form__label">
-        <input type="checkbox" class="contact__form__label__checkbox">
-        I am happy to be contacted regarding my enquiry
-      </label>
+        <label class="contact__form__label-checkbox">
+          <input type="checkbox" class="contact__form__label-checkbox__checkbox">
+          I am happy to be contacted regarding my enquiry
+        </label>
 
-      <button class="contact__form__button">
-        send
-      </button>
-    </form>
+        <button class="contact__form__button" type="submit">
+          send
+        </button>
+      </form>
+    </section>
   </main>
 </template>
 
 <style lang="scss">
-.contact {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-
-  &__heading {
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    padding: 6rem 0;
-    margin: 0;
-    color: $alt-text-color;
-  }
-
-  &__form {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding-bottom: 3rem;
-
-    &__label {
-      width: 100%;
-      padding: .75rem 0;
-      text-transform: uppercase;
-      font-size: .9rem;
-      &:nth-child(5) {
-        width: 80%;
-        margin: 0 auto;
-        text-transform: unset;
-        line-height: 1.2rem;
-      }
-
-      &__input {
-        resize: none;
-        width: 100%;
-        box-sizing: border-box;
-        background-color: $inputs-color;
-        border: solid 1px $inputs-border-color;
-        border-radius: 5px;
-        padding: .6rem;
-        margin-top: 1rem;
-        color: $lightest-color;
-
-        &:focus {
-          outline: none;
-          border: 1px solid $lightest-color;
-        }
-      }
-
-      &__checkbox {
-        margin-right: 10px;
-        width: 20px;
-        height: 20px;
-      }
-    }
-
-    &__button {
-      margin-top: 2rem;
-      padding: .6rem 0;
-      background-color: $button-color;
-      border-radius: 5px;
-      color: $lightest-color;
-      text-transform: uppercase;
-      letter-spacing: .1rem;
-      font-weight: 500;
-    }
-  }
-}
+@include forms(contact)
 </style>

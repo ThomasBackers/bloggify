@@ -4,10 +4,6 @@ import { createStore } from 'vuex'
 // actions can be asynchronous
 const store = createStore({
   state: {
-    user: {
-      data: { name: 'test' },
-      token: null
-    },
     menu: {
       isOpen: false,
       alreadyBeenUsed: false
