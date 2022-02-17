@@ -23,6 +23,10 @@ import Form from '../components/Form.vue'
           {
             label: 'password',
             type: 'password'
+          },
+          {
+            label: 'confirm password',
+            type: 'password'
           }
         ]"
         buttonLabel="sign up"

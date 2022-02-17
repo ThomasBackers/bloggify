@@ -46,9 +46,9 @@ import 'normalize.css'
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $darkest-color;
   min-height: 100vh;
   overflow: hidden;
-  background-color: $darkest-color;
   display: flex;
   flex-direction: column;
 }
