@@ -19,6 +19,7 @@ defineProps({
     :class="`${sectionName}__form`"
     :action="action"
     :method="method"
+    @submit.prevent="() => {}"
   >
     <label
       v-for="(input, i) of inputs"
@@ -29,6 +30,7 @@ defineProps({
         v-if="input.type === 'checkbox'"
         type="checkbox"
         :class="`${sectionName}__form__label-checkbox__checkbox`"
+        :name="input.name"
       >
 
       {{ input.label }}
@@ -37,12 +39,14 @@ defineProps({
         v-if="input.type === 'text' || input.type === 'password' || input.type === 'email'"
         :type="input.type"
         :class="`${sectionName}__form__label__input`"
+        :name="input.name"
       >
 
       <textarea
         v-else-if="input.type === 'textarea'"
         rows="10"
         :class="`${sectionName}__form__label__input`"
+        :name="input.name"
       ></textarea>
     </label>
 

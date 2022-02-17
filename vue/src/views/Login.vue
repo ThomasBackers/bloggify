@@ -14,15 +14,18 @@ import Form from '../components/Form.vue'
         :inputs="[
           {
             label: 'email address',
-            type: 'email'
+            type: 'email',
+            name: 'email'
           },
           {
             label: 'password',
-            type: 'password'
+            type: 'password',
+            name: 'password'
           },
           {
             label: 'Remember me',
-            type: 'checkbox'
+            type: 'checkbox',
+            name: 'remember'
           }
         ]"
         buttonLabel="sign in"

@@ -1,5 +1,25 @@
 <script setup>
 import Form from '../components/Form.vue'
+import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
+
+const store = useStore()
+const router = useRouter()
+
+const user = {
+  name: '',
+  email: '',
+  password: '',
+  password_confirmation: ''
+}
+
+const register = () => {
+  store.dispatch('register', user).then(() => {
+    router.push({
+      name: 'home'
+    })
+  })
+}
 </script>
 
 <template>
@@ -11,6 +31,7 @@ import Form from '../components/Form.vue'
 
       <Form
         sectionName="register"
+        :method="''"
         :inputs="[
           {
             label: 'email address',
@@ -30,7 +51,7 @@ import Form from '../components/Form.vue'
           {
             label: 'confirm password',
             type: 'password',
-            name: 'passwordConfirmation'
+            name: 'password_confirmation'
           }
         ]"
         buttonLabel="sign up"

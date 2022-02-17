@@ -14,23 +14,28 @@ import Form from '../components/Form.vue'
         :inputs="[
           {
             label: 'your name',
-            type: 'text'
+            type: 'text',
+            name: 'name'
           },
           {
             label: 'your email',
-            type: 'email'
+            type: 'email',
+            name: 'email'
           },
           {
             label: 'subject',
-            type: 'text'
+            type: 'text',
+            name: 'subject'
           },
           {
             label: 'your message',
-            type: 'textarea'
+            type: 'textarea',
+            name: 'message'
           },
           {
             label: 'I am happy to be contacted regarding my enquiry',
-            type: 'checkbox'
+            type: 'checkbox',
+            name: 'agree'
           }
         ]"
         buttonLabel="send"

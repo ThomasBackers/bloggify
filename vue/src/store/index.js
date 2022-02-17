@@ -7,6 +7,10 @@ const store = createStore({
     menu: {
       isOpen: false,
       alreadyBeenUsed: false
+    },
+    user: {
+      data: {},
+      token: null
     }
   },
   getters: {
