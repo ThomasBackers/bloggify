@@ -14,19 +14,23 @@ import Form from '../components/Form.vue'
         :inputs="[
           {
             label: 'email address',
-            type: 'email'
+            type: 'email',
+            name: 'email'
           },
           {
             label: 'username',
-            type: 'text'
+            type: 'text',
+            name: 'name'
           },
           {
             label: 'password',
-            type: 'password'
+            type: 'password',
+            name: 'password'
           },
           {
             label: 'confirm password',
-            type: 'password'
+            type: 'password',
+            name: 'passwordConfirmation'
           }
         ]"
         buttonLabel="sign up"
