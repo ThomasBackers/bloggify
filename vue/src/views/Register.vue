@@ -55,6 +55,8 @@ const register = () => {
           }
         ]"
         buttonLabel="sign up"
+        :fillables="user"
+        @submitFillables="register"
       />
     </section>
   </main>

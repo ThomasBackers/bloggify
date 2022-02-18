@@ -10,7 +10,8 @@ defineProps({
     default: 'post'
   },
   inputs: Array,
-  buttonLabel: String
+  buttonLabel: String,
+  fillables: Object
 })
 </script>
 
@@ -19,7 +20,7 @@ defineProps({
     :class="`${sectionName}__form`"
     :action="action"
     :method="method"
-    @submit.prevent="() => {}"
+    @submit.prevent="$emit('submitFillables')"
   >
     <label
       v-for="(input, i) of inputs"
@@ -31,6 +32,7 @@ defineProps({
         type="checkbox"
         :class="`${sectionName}__form__label-checkbox__checkbox`"
         :name="input.name"
+        v-model="fillables[input.name]"
       >
 
       {{ input.label }}
@@ -40,6 +42,7 @@ defineProps({
         :type="input.type"
         :class="`${sectionName}__form__label__input`"
         :name="input.name"
+        v-model="fillables[input.name]"
       >
 
       <textarea
@@ -47,6 +50,7 @@ defineProps({
         rows="10"
         :class="`${sectionName}__form__label__input`"
         :name="input.name"
+        v-model="fillables[input.name]"
       ></textarea>
     </label>
 
