@@ -71,7 +71,7 @@ watchEffect(() => {
     </ul>
 
     <a 
-      class="menu__corner top-left"
+      class="menu__corner top-left hidden"
       href="/user-slug"
       ref="profile"
     >
@@ -79,7 +79,7 @@ watchEffect(() => {
     </a>
 
     <a 
-      class="menu__corner bottom-left"
+      class="menu__corner bottom-left hidden"
       href="/playlist"
       ref="playlist"
     >
@@ -87,7 +87,7 @@ watchEffect(() => {
     </a>
 
     <a 
-      class="menu__corner bottom-left hidden"
+      class="menu__corner bottom-left"
       href="/login"
       ref="login"
     >
@@ -95,7 +95,7 @@ watchEffect(() => {
     </a>
 
     <a 
-      class="menu__corner bottom-right"
+      class="menu__corner bottom-right hidden"
       href="/logout"
       ref="logout"
     >
@@ -103,7 +103,7 @@ watchEffect(() => {
     </a>
 
     <a 
-      class="menu__corner bottom-right hidden"
+      class="menu__corner bottom-right"
       href="/register"
       ref="register"
     >

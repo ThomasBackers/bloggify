@@ -1,5 +1,19 @@
 <script setup>
 import Form from '../components/Form.vue'
+
+import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
+
+const store = useStore()
+const router = useRouter()
+
+const logs = {
+  name: '',
+  email: '',
+  remember: ''
+}
+
+const login = () => {}
 </script>
 
 <template>
@@ -29,6 +43,8 @@ import Form from '../components/Form.vue'
           }
         ]"
         buttonLabel="sign in"
+        :fillables="logs"
+        @submitFillables="login"
       />
     </section>
   </main>
