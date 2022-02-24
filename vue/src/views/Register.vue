@@ -14,7 +14,7 @@ const user = {
 }
 
 const register = () => {
-  store.dispatch('register', user).then(() => {
+  store.dispatch('register', user).then(res => {
     router.push({
       name: 'home'
     })
@@ -31,7 +31,8 @@ const register = () => {
 
       <Form
         sectionName="register"
-        :method="''"
+        :method="null"
+        :action="null"
         :inputs="[
           {
             label: 'email address',
