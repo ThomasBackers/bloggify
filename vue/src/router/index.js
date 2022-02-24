@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Contact from '../views/Contact.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
+import Profile from '../views/Profile.vue'
 
 const routes = [
   {
@@ -29,6 +30,12 @@ const routes = [
         path: 'register',
         name: 'register',
         component: Register
+      },
+      {
+        path: 'profile',
+        name: 'profile',
+        component: Profile,
+        meta: { requiresAuth: true }
       }
     ]
   }
