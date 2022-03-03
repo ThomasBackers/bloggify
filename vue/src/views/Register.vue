@@ -14,11 +14,9 @@ const user = {
 }
 
 const register = () => {
-  store.dispatch('register', user).then(res => {
-    router.push({
-      name: 'home'
-    })
-  })
+  store.dispatch('register', user).then(
+    res => router.push({ name: 'home' })
+  )
 }
 </script>
 

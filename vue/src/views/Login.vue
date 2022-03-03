@@ -1,19 +1,28 @@
 <script setup>
 import Form from '../components/Form.vue'
 
+import { ref } from 'vue'
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 
 const store = useStore()
 const router = useRouter()
 
-const logs = {
+const errorMessage = ref('')
+
+const user = {
   name: '',
   email: '',
-  remember: ''
+  remember: false
 }
 
-const login = () => {}
+const login = () => {
+  store.dispatch('login', user).then(
+    res => router.push({ name: 'home' })
+  ).catch(
+    err => errorMessage.value = err
+  )
+}
 </script>
 
 <template>
@@ -43,7 +52,7 @@ const login = () => {}
           }
         ]"
         buttonLabel="sign in"
-        :fillables="logs"
+        :fillables="user"
         @submitFillables="login"
       />
     </section>

@@ -1,9 +1,12 @@
 <script setup>
 import { useStore } from 'vuex'
+import { useRouter } from 'vue-router'
 import { computed, ref, watchEffect } from 'vue'
 
 const store = useStore()
+const router = useRouter()
 const menu = computed(() => store.state.menu)
+const user = computed(() => store.getters.getUser)
 
 const nav = ref(null)
 const list = ref(null)
@@ -31,6 +34,12 @@ const launchAnim = anim => {
     logout.value.style.animation = 'closingCornerAnim .2s ease-out forwards'
     register.value.style.animation = 'closingCornerAnim .2s ease-out forwards'
   }
+}
+
+const logoutUser = () => {
+  store.dispatch('logout').then(
+    res => router.push({ name: 'home' })
+  )
 }
 
 watchEffect(() => {
@@ -71,15 +80,15 @@ watchEffect(() => {
     </ul>
 
     <a 
-      class="menu__corner top-left hidden"
-      href="/user-slug"
+      :class="user.token ? 'menu__corner top-left' : 'hidden'"
+      href="/profile"
       ref="profile"
     >
       profile
     </a>
 
     <a 
-      class="menu__corner bottom-left hidden"
+      :class="user.token ? 'menu__corner bottom-left' : 'hidden'"
       href="/playlist"
       ref="playlist"
     >
@@ -87,7 +96,7 @@ watchEffect(() => {
     </a>
 
     <a 
-      class="menu__corner bottom-left"
+      :class="!user.token ? 'menu__corner bottom-left' : 'hidden'"
       href="/login"
       ref="login"
     >
@@ -95,15 +104,15 @@ watchEffect(() => {
     </a>
 
     <a 
-      class="menu__corner bottom-right hidden"
-      href="/logout"
+      :class="user.token ? 'menu__corner bottom-right' : 'hidden'"
+      @click="logoutUser"
       ref="logout"
     >
       logout
     </a>
 
     <a 
-      class="menu__corner bottom-right"
+      :class="!user.token ? 'menu__corner bottom-right' : 'hidden'"
       href="/register"
       ref="register"
     >
